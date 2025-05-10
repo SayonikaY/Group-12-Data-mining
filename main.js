@@ -448,13 +448,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .attr('height', height);
 
         const g = svg.append('g')
-            .attr('transform', `translate(${width / 2}, 40)`);
+            .attr('transform', `translate(${width / 10}, 40)`);
 
         // Create hierarchy
         const root = d3.hierarchy(ppcTree.root);
 
         // Create tree layout
-        const treeLayout = d3.tree().size([width / 2, height - 100]);
+        const treeLayout = d3.tree().size([width / 1.25, height - 100]);
 
         // Apply layout
         treeLayout(root);
