@@ -422,7 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return count;
         }
 
-        let resultText = `(${state.minSupport * 100}% support) Recommended ${countTotalPatterns(frequentPatterns)} combos:\n\n`;
+        let resultText = `(${state.minSupport * 100}% support) Recommended ${countTotalPatterns(frequentPatterns)} combos:\n`
+            + `(Stand-alone item is popular item)\n`
+            + `\n\n`;
         for (const [k, patterns] of frequentPatterns) {
             for (const [itemSet, entries] of patterns) {
                 const itemName = Array.from(itemSet).join(', ');
